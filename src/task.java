@@ -45,6 +45,14 @@ public class task {
         this.actionDoneToday = state;
     }
 
+    public double getAverageLevel() {
+        return (health + mood + satiety) / 3.0;
+    }
+
+    public boolean isDead() {
+        return health <= 0 || satiety <= 0 || mood <= 0;
+    }
+
     public void updateHealth(int delta) {
         this.health = Math.min(100, Math.max(0, this.health + delta));
     }
