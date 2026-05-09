@@ -45,5 +45,17 @@ public class task {
         this.actionDoneToday = state;
     }
 
+    public void updateHealth(int delta) {
+        this.health = Math.min(100, Math.max(0, this.health + delta));
+    }
+
+    public void updateMood(int delta) {
+        this.mood = Math.min(100, Math.max(0, this.mood + delta));
+    }
+
+    public void updateSatiety(int delta) {
+        this.satiety = Math.min(100, Math.max(0, this.satiety + delta));
+    }
+
 
 }
